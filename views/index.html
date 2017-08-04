@@ -1,0 +1,52 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Https proxy server</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        Https proxy server
+      </h1>
+    </header>
+
+    <main>
+      <p>Weather API</p>      
+      <p>Route : /api.weather?</p>
+      <p>Required params : lat, lon</p>
+      <p>Example : https://hickory-office.glitch.me/api.weather?lat=40.7127837&lon=74.00594130000002</p>
+      <p>Returns : json</p>
+      
+      <form>
+        Latitude <input type="text" name="lat" id="lat" value="40.7127837">
+        Longitude <input type="text" name="lon" id="lon" value="-74.00594130000002">
+        <button type="submit">Submit</button>
+      </form>
+      <section >
+        <p id="weather"></p>
+      </section>
+    </main>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/client.js"></script>
+
+  </body>
+</html>
